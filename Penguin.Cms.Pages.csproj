@@ -7,8 +7,8 @@
     <Description>Not Available</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Cms.Entities" Version="3.0.3" />
     <PackageReference Include="Penguin.Extensions.String" Version="3.0.2" />
     <PackageReference Include="Penguin.Templating.Abstractions" Version="1.0.0" />
+    <PackageReference Include="Penguin.Cms.Entities" Version="3.0.3-63707652289" />
   </ItemGroup>
 </Project>
