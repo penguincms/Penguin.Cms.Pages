@@ -5,9 +5,11 @@
     <PackageProjectUrl>https://github.com/penguincms/Penguin.Cms.Pages</PackageProjectUrl>
     <Version>1.0.0</Version>
     <Description>Not Available</Description>
+    <AssemblyName>Penguin.Cms.Pages</AssemblyName>
+    <RootNamespace>Penguin.Cms.Pages</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Cms.Entities" Version="3.0.4-T9M1HHH" />
-    <PackageReference Include="Penguin.Templating.Abstractions" Version="1.0.1-T9M1HHH" />
+    <PackageReference Include="Penguin.Cms.Entities" Version="3.0.4-T9M2XAX" />
+    <PackageReference Include="Penguin.Templating.Abstractions" Version="1.0.1-T9M2XAX" />
   </ItemGroup>
 </Project>
