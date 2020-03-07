@@ -13,14 +13,6 @@ namespace Penguin.Cms.Pages
     [SuppressMessage("Usage", "CA2227:Collection properties should be read only")]
     public class Page : AuditableEntity, IModifiableEntity
     {
-        public enum PageType
-        {
-            WYSIWYG,
-            HTML,
-            CSS,
-            JS
-        }
-
         public bool Cascade { get; set; }
 
         [HtmlRender(HtmlRenderAttribute.RenderingType.html)]
@@ -37,6 +29,14 @@ namespace Penguin.Cms.Pages
         public PageType Type { get; set; }
 
         public string Url { get; set; }
+
+        public enum PageType
+        {
+            WYSIWYG,
+            HTML,
+            CSS,
+            JS
+        }
 
         public Page()
         {
@@ -61,6 +61,9 @@ namespace Penguin.Cms.Pages
             return PageType.HTML;
         }
 
-        public override string ToString() => this.Url ?? string.Empty;
+        public override string ToString()
+        {
+            return this.Url ?? string.Empty;
+        }
     }
 }
