@@ -9,6 +9,11 @@ namespace Penguin.Cms.Pages
 
         public static implicit operator Penguin.Templating.Abstractions.TemplateParameter(TemplateParameter source)
         {
+            if (source is null)
+            {
+                throw new System.ArgumentNullException(nameof(source));
+            }
+
             return new Templating.Abstractions.TemplateParameter
             {
                 Name = source.Name,
