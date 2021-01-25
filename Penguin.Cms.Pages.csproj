@@ -10,7 +10,7 @@
     <DocumentationFile>Penguin.Cms.Pages.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Penguin.Templating.Abstractions" Version="5.0.1-TA56XNT" />
-    <PackageReference Include="Penguin.Cms.Entities" Version="5.0.1-TA56XNT" />
+    <PackageReference Include="Penguin.Templating.Abstractions" Version="5.0.1-TA99DVY" />
+    <PackageReference Include="Penguin.Cms.Entities" Version="5.0.1-TA99DVY" />
   </ItemGroup>
 </Project>
