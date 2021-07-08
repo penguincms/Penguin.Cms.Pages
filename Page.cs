@@ -9,8 +9,8 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Penguin.Cms.Pages
 {
-    [SuppressMessage("Design", "CA1056:Uri properties should not be strings")]
-    [SuppressMessage("Usage", "CA2227:Collection properties should be read only")]
+    
+    
     public class Page : AuditableEntity, IModifiableEntity
     {
         public bool Cascade { get; set; }
@@ -43,7 +43,7 @@ namespace Penguin.Cms.Pages
             this.Parameters = new List<TemplateParameter>();
         }
 
-        [SuppressMessage("Design", "CA1054:Uri parameters should not be strings")]
+        
         public static PageType GetPageType(string Url)
         {
             if (Url != null)
