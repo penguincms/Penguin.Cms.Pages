@@ -1,4 +1,4 @@
-﻿using Penguin.Cms.Entities;
+using Penguin.Cms.Entities;
 using Penguin.Extensions.Strings;
 using Penguin.Persistence.Abstractions.Attributes.Control;
 using Penguin.Persistence.Abstractions.Attributes.Rendering;
@@ -8,7 +8,6 @@ using System.Collections.Generic;
 
 namespace Penguin.Cms.Pages
 {
-
 
     public class Page : AuditableEntity, IModifiableEntity
     {
@@ -41,7 +40,6 @@ namespace Penguin.Cms.Pages
         {
             this.Parameters = new List<TemplateParameter>();
         }
-
 
         public static PageType GetPageType(string Url)
         {
