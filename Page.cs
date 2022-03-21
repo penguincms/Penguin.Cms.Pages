@@ -5,12 +5,11 @@ using Penguin.Persistence.Abstractions.Attributes.Rendering;
 using Penguin.Templating.Abstractions.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
 namespace Penguin.Cms.Pages
 {
-    
-    
+
+
     public class Page : AuditableEntity, IModifiableEntity
     {
         public bool Cascade { get; set; }
@@ -43,7 +42,7 @@ namespace Penguin.Cms.Pages
             this.Parameters = new List<TemplateParameter>();
         }
 
-        
+
         public static PageType GetPageType(string Url)
         {
             if (Url != null)
@@ -61,9 +60,6 @@ namespace Penguin.Cms.Pages
             return PageType.HTML;
         }
 
-        public override string ToString()
-        {
-            return this.Url ?? string.Empty;
-        }
+        public override string ToString() => this.Url ?? string.Empty;
     }
 }
