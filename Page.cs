@@ -1,5 +1,5 @@
 using Penguin.Cms.Entities;
-using Penguin.Extensions.Strings;
+using Penguin.Extensions.String;
 using Penguin.Persistence.Abstractions.Attributes.Control;
 using Penguin.Persistence.Abstractions.Attributes.Rendering;
 using Penguin.Templating.Abstractions.Interfaces;
@@ -58,6 +58,9 @@ namespace Penguin.Cms.Pages
             return PageType.HTML;
         }
 
-        public override string ToString() => this.Url ?? string.Empty;
+        public override string ToString()
+        {
+            return this.Url ?? string.Empty;
+        }
     }
 }
