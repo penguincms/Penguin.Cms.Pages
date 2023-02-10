@@ -8,7 +8,6 @@ using System.Collections.Generic;
 
 namespace Penguin.Cms.Pages
 {
-
     public class Page : AuditableEntity, IModifiableEntity
     {
         public bool Cascade { get; set; }
@@ -38,18 +37,18 @@ namespace Penguin.Cms.Pages
 
         public Page()
         {
-            this.Parameters = new List<TemplateParameter>();
+            Parameters = new List<TemplateParameter>();
         }
 
         public static PageType GetPageType(string Url)
         {
             if (Url != null)
             {
-                if (Url.Length > 3 && string.Equals(Url.Right(4), ".css", StringComparison.InvariantCultureIgnoreCase))
+                if (Url.Length > 3 && string.Equals(Url.Right(4), ".css", StringComparison.OrdinalIgnoreCase))
                 {
                     return PageType.CSS;
                 }
-                else if (Url.Length > 2 && string.Equals(Url.Right(3), ".js", StringComparison.InvariantCultureIgnoreCase))
+                else if (Url.Length > 2 && string.Equals(Url.Right(3), ".js", StringComparison.OrdinalIgnoreCase))
                 {
                     return PageType.JS;
                 }
@@ -60,7 +59,12 @@ namespace Penguin.Cms.Pages
 
         public override string ToString()
         {
-            return this.Url ?? string.Empty;
+            return Url ?? string.Empty;
+        }
+
+        public static PageType GetPageType(Uri Url)
+        {
+            throw new NotImplementedException();
         }
     }
 }

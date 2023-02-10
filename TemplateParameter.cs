@@ -9,17 +9,19 @@ namespace Penguin.Cms.Pages
 
         public static implicit operator Penguin.Templating.Abstractions.TemplateParameter(TemplateParameter source)
         {
-            if (source is null)
-            {
-                throw new System.ArgumentNullException(nameof(source));
-            }
+            return source is null
+                ? throw new System.ArgumentNullException(nameof(source))
+                : new Templating.Abstractions.TemplateParameter
+                {
+                    Name = source.Name,
+                    Value = source.Value,
+                    Type = typeof(string)
+                };
+        }
 
-            return new Templating.Abstractions.TemplateParameter
-            {
-                Name = source.Name,
-                Value = source.Value,
-                Type = typeof(string)
-            };
+        public Templating.Abstractions.TemplateParameter ToTemplateParameter()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
