@@ -5,6 +5,7 @@ namespace Penguin.Cms.Pages
     public class TemplateParameter : AuditableEntity
     {
         public string Name { get; set; } = string.Empty;
+
         public string Value { get; set; } = string.Empty;
 
         public static implicit operator Penguin.Templating.Abstractions.TemplateParameter(TemplateParameter source)
