@@ -62,10 +62,5 @@ namespace Penguin.Cms.Pages
         {
             return Url ?? string.Empty;
         }
-
-        public static PageType GetPageType(Uri Url)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
